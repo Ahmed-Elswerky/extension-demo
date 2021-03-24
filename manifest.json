@@ -1,0 +1,20 @@
+{
+	"manifest_version": 3,
+
+	"name": "Swerky's Ext",
+	"description": "redirect to esteghfaro if facebook, and darken the page",
+	"version": "1.0",
+
+	"action": {
+		"default_popup": "src/popup.html"
+	},
+
+	"permissions": [ "activeTab", "tabs", "storage" ],
+
+	"content_scripts": [
+		{
+			"matches": [ "http://*/*", "https://*/*" ],
+			"js": [ "src/build/main.js" ]
+		}
+	]
+}
